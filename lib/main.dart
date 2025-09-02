@@ -5,23 +5,25 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: const Color(0xFF181818),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 80),
+              const SizedBox(height: 80),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
+                    children: const [
                       Text(
                         'Hey, ABC',
                         style: TextStyle(
@@ -41,7 +43,7 @@ class App extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 120),
+              const SizedBox(height: 120),
               Text(
                 'Total Balance',
                 style: TextStyle(
@@ -49,24 +51,24 @@ class App extends StatelessWidget {
                   color: Colors.white.withOpacity(0.8),
                 ),
               ),
-              SizedBox(height: 5),
-              Text(
-                '\$5 123 456',
+              const SizedBox(height: 5),
+              const Text(
+                '\$5 194 482',
                 style: TextStyle(
                   fontSize: 48,
                   fontWeight: FontWeight.w600,
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Row(
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.amber,
+                      color: const Color(0xFFF1B33B),
                       borderRadius: BorderRadius.circular(45),
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 50,
