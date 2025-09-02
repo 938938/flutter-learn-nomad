@@ -4,14 +4,45 @@ void main() {
   runApp(App());
 }
 
-// build 메소드는 widget의 UI를 생성
 class App extends StatelessWidget {
-  @override // 부모 class에 이미 있는 메소드를 override
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Hello!')),
-        body: Center(child: Text('Hello world!')),
+        backgroundColor: Color(0xFF181818),
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            children: [
+              SizedBox(height: 80),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        'Hey, ABC',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 28,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      Text(
+                        'Welcome back',
+                        style: TextStyle(
+                          color: Color.fromRGBO(255, 255, 255, 0.8),
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
